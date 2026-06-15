@@ -1,0 +1,41 @@
+    1  sudo fdisk -l
+    2  exit
+    3  sudo fdisk -l
+    4  sudo fdisk /dev/sddsudo fdisk /devsudo fdisk /dev/sddhosoxitxt
+    5  exitvagrant ssh
+    6  exit
+    7  sudo fdisk /dev/sdd
+    8  free
+    9  free -h
+   10  sudo mkswap /dev/sdd1
+   11  free -h
+   12  sudo swapon /dev/sdd1
+   13  free -h
+   14  swapon -s
+   15  cat /proc/swaps
+   16  sudo fdisk /dev/sdc
+   17  sudo wipefs -a /dev/sdc1
+   18  sudo wipefs -a /dev/sdc2
+   19  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   20  sudo pvs
+   21  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   22  sudo vgs
+   23  sudo pvs
+   24  sudo vgcreate vg_web /dev/sdc2
+   25  sudo pvs
+   26  sudo lvcreate -L 1G vg_web -n lv_web1
+   27  sudo lvcreate -L 512M vg_web -n lv_web2
+   28  sudo lvcreate -L 512M vg_web -n lv_web3
+   29  sudo lvs
+   30  sudo pvs
+   31  sudo fdisk -l
+   32  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   33  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   34  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   35  git clone git@github.com:thiagoburgener/TP2_Burgener_Thiago.git
+   36  git clone https://github.com/thiagoburgener/TP2_Burgener_Thiago.git
+   37  cd TP2_Burgener_Thiago/
+   38  sudo pvs > pvs.txt
+   39  sudo vgs > vgs.txt
+   40  sudo lvs > lvs.txt
+   41  history > historial_lvm.txt
